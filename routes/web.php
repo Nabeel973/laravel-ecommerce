@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/login', function () {
     return view('login');
 });
+
+Route::post('/login','UserLoginController@login')->name('login');
+Route::get('/index','ProductController@index')->name('product.index');
